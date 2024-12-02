@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLAME GAME</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "jBlbM7tEq8xWF3g2i",
+      });
+   })();
+</script>
+</head>
+<body>
+    <div class="main-header">
+        <h1>FLAME GAME</h1>
+    </div>
+    <div class="container">
+        <h2>Enter Two Names to Find Out Their Relationship!</h2>
+        <input type="text" id="name1" placeholder="Enter First Name">
+        <input type="text" id="name2" placeholder="Enter Second Name">
+        <button onclick="playFlames()">Find Relationship</button>
+        
+        <div id="result-container">
+            <div id="result" class="result"></div>
+            <img id="result-image" src="" alt="" class="hidden">
+        </div>
+    </div>
+
+    <div class="flames-rules">
+        <h2>How the FLAMES Calculator Works</h2>
+        <p>FLAMES stands for:</p>
+        <ul>
+            <li><strong>F</strong> - Friendship</li>
+            <li><strong>L</strong> - Love</li>
+            <li><strong>A</strong> - Affection</li>
+            <li><strong>M</strong> - Marriage</li>
+            <li><strong>E</strong> - Enemy</li>
+            <li><strong>S</strong> - Sister (Sibling)</li>
+        </ul>
+        <h3>Example:</h3>
+        <p><strong>Your name:</strong> asd</p>
+        <p><strong>Your partner's name:</strong> abcd</p>
+        <ol>
+            <li><strong>Get the flames count:</strong>
+                <p>Take the two names (asd and abcd). Remove the common characters (two common characters: 'a', 'd').<br>
+                Get the count of the characters that are left (remaining letters: 's', 'b', 'c'). Total: 3.</p>
+            </li>
+            <li><strong>Get the flames result:</strong>
+                <p>We take the FLAMES letters ('F', 'L', 'A', 'M', 'E', 'S') and start removing letters using the count.<br>
+                Start counting from the left up to 3 and remove the letter at position 3 ('A'). The sequence becomes:</p>
+                <ul>
+                    <li>FLMES</li>
+                    <li>Remove 'S' after counting 3 positions from 'M'. The sequence becomes: FLME</li>
+                    <li>Next, remove 'E' to get: FLE</li>
+                    <li>Then: FE</li>
+                    <li>Finally: F</li>
+                </ul>
+                <p>So the result is 'Friend' as letter 'F' stands for Friendship in the FLAMES game.</p>
+            </li>
+        </ol>
+    </div>
+
+    <footer class="footer">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <p>Enjoyed the game? Leave us a review or share your feedback!</p>
+    
+            <!-- Hidden field for the Web3Forms API key -->
+            <input type="hidden" name="access_key" value="3349bc37-ed42-4c95-94c7-2538463ffd51">
+    
+            <!-- Input fields for name and review -->
+            <input 
+                type="text" 
+                name="name" 
+                id="reviewer-name" 
+                placeholder="Your Name" 
+                required 
+                style="display: block; margin-bottom: 10px; padding: 10px; width: 100%; box-sizing: border-box;">
+    
+            <input 
+                type="text" 
+                name="message" 
+                id="review" 
+                placeholder="Write your review here..." 
+                required 
+                style="display: block; margin-bottom: 10px; padding: 10px; width: 100%; box-sizing: border-box;">
+    
+            <!-- Submit button -->
+            <button 
+                type="submit" 
+                style="padding: 10px 20px; background-color: #007BFF; color: #fff; border: none; border-radius: 5px; cursor: pointer;">
+                Submit Review
+            </button>
+        </form>
+    
+        <!-- Review section outside the form -->
+        <div id="review-section" class="review-section"></div>
+    
+        <p>&copy; 2024.developed by soumen</p>
+    </footer>
+    
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

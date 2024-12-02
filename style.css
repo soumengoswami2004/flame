@@ -1,0 +1,163 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a0c4ff, #ffc6ff);
+    margin: 0;
+    padding: 20px;
+    color: #2c2c54;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-header h1 {
+    font-size: 48px;
+    color: #3c1e70;
+    text-shadow: 2px 2px 5px #d1b3ff;
+}
+
+.container {
+    width: 90%; /* Increased width for better fit */
+    max-width: 800px; /* Increased max width */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff8e1;
+    padding: 30px; /* Increased padding */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #3c1e70;
+    font-size: 26px;
+}
+
+input[type="text"] {
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #00a8cc;
+    border-radius: 10px;
+    background-color: #fffcf2;
+    width: calc(100% - 24px); /* Ensures inputs stay within the container */
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007788;
+}
+
+button {
+    padding: 14px 25px;
+    background: linear-gradient(90deg, #00a8cc, #005082);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 15px;
+    width: 100%; /* Full width for better responsiveness */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #007788, #00334e);
+    transform: translateY(-3px);
+}
+
+#result-container {
+    margin-top: 25px;
+}
+
+.result {
+    font-size: 22px;
+    color: #3c1e70;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#result-image {
+    width: 180px; /* Larger image */
+    height: 180px;
+    border-radius: 10px;
+    border: 2px solid #00a8cc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.flames-rules {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #ff9e80;
+    border-radius: 20px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    color: #2c2c54;
+    font-size: 16px;
+}
+
+.footer {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #007788;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer input[type="text"] {
+    width: calc(50% - 16px);
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #e44f21;
+    margin-bottom: 10px;
+    outline: none;
+    margin-right: 4px;
+    background-color: #fffcf2;
+}
+
+.footer input[type="text"]:focus {
+    border-color: #00a8cc;
+}
+
+.review-section p {
+    color: #2c2c54;
+    background-color: #fffcf2;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        padding: 20px;
+        width: 95%; /* Adjust width for smaller screens */
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .footer input[type="text"] {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 10px;
+    }
+}
+
+.footer p:last-child {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #dcab0b;
+}
+
+.hidden {
+    display: none;
+}
